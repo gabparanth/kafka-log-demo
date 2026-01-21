@@ -1,0 +1,10 @@
+{
+  "name": "shared-logger",
+  "version": "1.0.0",
+  "main": "logger.js",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "mongodb": "^6.3.0",
+    "uuid": "^9.0.0"
+  }
+}

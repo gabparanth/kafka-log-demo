@@ -1,0 +1,15 @@
+{
+  "name": "kafka-log-demo",
+  "version": "1.0.0",
+  "description": "End-to-end log monitoring with Kafka, MongoDB, and Next.js",
+  "scripts": {
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "install:all": "cd services/shared && npm install && cd ../order-service && npm install && cd ../payment-service && npm install && cd ../notification-service && npm install && cd ../../dashboard && npm install",
+    "start:order": "cd services/order-service && npm start",
+    "start:payment": "cd services/payment-service && npm start",
+    "start:notification": "cd services/notification-service && npm start",
+    "start:dashboard": "cd dashboard && npm run dev",
+    "demo": "echo 'Start services in separate terminals: npm run start:order, npm run start:payment, npm run start:notification, npm run start:dashboard'"
+  }
+}
