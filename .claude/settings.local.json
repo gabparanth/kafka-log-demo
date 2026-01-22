@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(gh auth:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(docker ps:*)",
+      "Bash(node test-outbox.js:*)",
+      "Bash(timeout 10 node:*)",
+      "Bash(node -e:*)",
+      "Bash(docker exec:*)",
+      "Bash(curl:*)"
     ]
   }
 }

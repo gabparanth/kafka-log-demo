@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  mongodb-local:
+    image: mongo:7.0
+    hostname: mongodb-local
+    container_name: mongodb-local
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: outbox_db
+    volumes:
+      - mongodb_data:/data/db
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
     hostname: zookeeper
@@ -28,3 +39,6 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+
+volumes:
+  mongodb_data:
